@@ -127,13 +127,12 @@ first: function(collection, n) {
 
   },
 
-last: function(collection) {
-  if  (Array.isArray(collection)) {
-  return collection.length
+last: function(collection, n) {
+  if (n !== undefined) {
+    return collection.slice(-n)
   } else {
-    let array = Object.keys(collection)
-    return array.length
-    
+    let num = collection.length -1
+    return collection[num]
   }
 
   
@@ -141,74 +140,95 @@ last: function(collection) {
 },
 
 compact: function(collection) {
-  if  (Array.isArray(collection)) {
-  return collection.length
-  } else {
-    let array = Object.keys(collection)
-    return array.length
-    
-  }
+ return collection.filter(Boolean)
 
   
 
 },
 
-sortBy: function(collection) {
-  if  (Array.isArray(collection)) {
+sortBy: function(collection, cb) {
   
-  } else {
-    let array = Object.keys(collection)
-   
+  const newArr = [...collection];
+
+  return newArr.sort((a, b) => {
+    const valA = cb(a);
+    const valB = cb(b);
+
     
+    if (typeof valA === "string" && typeof valB === "string") {
+      return valA.localeCompare(valB);
+    }
+
+    return valA - valB;
+  });
+},
+
+  
+
+  flatten: function(collection, shallow = false, arr = []) {
+  for (let i = 0; i < collection.length; i++) {
+    const value = collection[i];
+
+    if (Array.isArray(value)) {
+      if (shallow) {
+        
+        arr.push(...value);
+      } else {
+        
+        this.flatten(value, false, arr);
+      }
+    } else {
+      arr.push(value);
+    }
   }
 
-  },
+  return arr;
+},
 
-  flatten: function(collection) {
-  if  (Array.isArray(collection)) {
-  
-  } else {
-    let array = Object.keys(collection)
-   
-    
+  uniq: function(array, isSorted = false, iteratee = false) {
+  const result = [];
+  const seen = [];
+
+  for (let i = 0; i < array.length; i++) {
+    const value = array[i];
+    const computed = iteratee ? iteratee(value) : value;
+    if (isSorted) {
+      if (i === 0 || computed !== seen[seen.length - 1]) {
+        seen.push(computed);
+        result.push(value);
+      }
+    } 
+    else {
+      if (!seen.includes(computed)) {
+        seen.push(computed);
+        result.push(value);
+      }
+    }
   }
 
-  },
-
-  uniq: function(collection) {
-  if  (Array.isArray(collection)) {
-  
-  } else {
-    let array = Object.keys(collection)
-   
-    
-  }
-
-  },
+  return result;
+},
 
   keys: function(collection) {
-  if  (Array.isArray(collection)) {
-  
-  } else {
-    let array = Object.keys(collection)
-   
-    
-  }
+ return Object.keys(collection)
 
   },
 
   values: function(collection) {
-  if  (Array.isArray(collection)) {
-  
-  } else {
-    let array = Object.keys(collection)
-   
-    
-  }
+  return Object.values(collection)
 
   },
 
-functions: function() {
+functions: function(obj) {
+  const functionNames = [];
+
+  for (let key in obj) {
+    if (typeof obj[key] === "function") {
+      functionNames.push(key);
+    }
+  }
+
+  return functionNames.sort();
 
     },
 
