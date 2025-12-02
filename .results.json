@@ -2,12 +2,12 @@
   "stats": {
     "suites": 16,
     "tests": 34,
-    "passes": 8,
+    "passes": 10,
     "pending": 0,
-    "failures": 26,
-    "start": "2025-12-01T23:14:43.313Z",
-    "end": "2025-12-01T23:14:44.307Z",
-    "duration": 994
+    "failures": 24,
+    "start": "2025-12-02T00:03:02.383Z",
+    "end": "2025-12-02T00:03:03.122Z",
+    "duration": 739
   },
   "tests": [
     {
@@ -36,10 +36,7 @@
       "fullTitle": "index.js map successfully returns a correctly populated array",
       "duration": 0,
       "currentRetry": 0,
-      "err": {
-        "stack": "TypeError: Cannot read properties of undefined (reading 'length')\n    at arraysEqual (test/indexTest.js:295:28)\n    at Context.<anonymous> (test/indexTest.js:44:14)\n    at process.processImmediate (node:internal/timers:483:21)",
-        "message": "Cannot read properties of undefined (reading 'length')"
-      }
+      "err": {}
     },
     {
       "title": "does not modify the original array",
@@ -53,10 +50,7 @@
       "fullTitle": "index.js map successfully returns a correctly populated array from modified object values",
       "duration": 0,
       "currentRetry": 0,
-      "err": {
-        "stack": "TypeError: Cannot read properties of undefined (reading 'length')\n    at arraysEqual (test/indexTest.js:295:28)\n    at Context.<anonymous> (test/indexTest.js:55:14)\n    at process.processImmediate (node:internal/timers:483:21)",
-        "message": "Cannot read properties of undefined (reading 'length')"
-      }
+      "err": {}
     },
     {
       "title": "does not modify the original object",
@@ -199,7 +193,7 @@
     {
       "title": "returns a copy of the **array** with all falsy values removed. In JavaScript, _false_, _null_, _0_, _\"\"_, _undefined_ and _NaN_ are all falsy.",
       "fullTitle": "index.js compact returns a copy of the **array** with all falsy values removed. In JavaScript, _false_, _null_, _0_, _\"\"_, _undefined_ and _NaN_ are all falsy.",
-      "duration": 0,
+      "duration": 1,
       "currentRetry": 0,
       "err": {
         "stack": "TypeError: fi.compact is not a function\n    at Context.<anonymous> (test/indexTest.js:168:29)\n    at process.processImmediate (node:internal/timers:483:21)",
@@ -219,7 +213,7 @@
     {
       "title": "correctly sorts arrays of integers and arrays of strings",
       "fullTitle": "index.js sortBy correctly sorts arrays of integers and arrays of strings",
-      "duration": 0,
+      "duration": 1,
       "currentRetry": 0,
       "err": {
         "stack": "TypeError: fi.sortBy is not a function\n    at Context.<anonymous> (test/indexTest.js:200:29)\n    at process.processImmediate (node:internal/timers:483:21)",
@@ -229,7 +223,7 @@
     {
       "title": "does not modify the original arrays",
       "fullTitle": "index.js sortBy does not modify the original arrays",
-      "duration": 1,
+      "duration": 0,
       "currentRetry": 0,
       "err": {
         "stack": "TypeError: fi.sortBy is not a function\n    at Context.<anonymous> (test/indexTest.js:205:10)\n    at process.processImmediate (node:internal/timers:483:21)",
@@ -259,7 +253,7 @@
     {
       "title": "correctly flattens a single level when a second argument of \"true\" is passed",
       "fullTitle": "index.js flatten correctly flattens a single level when a second argument of \"true\" is passed",
-      "duration": 0,
+      "duration": 1,
       "currentRetry": 0,
       "err": {
         "stack": "TypeError: fi.flatten is not a function\n    at Context.<anonymous> (test/indexTest.js:227:26)\n    at process.processImmediate (node:internal/timers:483:21)",
@@ -279,7 +273,7 @@
     {
       "title": "removes duplicate values from an array when an iteratee is applied",
       "fullTitle": "index.js uniq removes duplicate values from an array when an iteratee is applied",
-      "duration": 1,
+      "duration": 0,
       "currentRetry": 0,
       "err": {
         "stack": "TypeError: fi.uniq is not a function\n    at Context.<anonymous> (test/indexTest.js:244:25)\n    at process.processImmediate (node:internal/timers:483:21)",
@@ -299,7 +293,7 @@
     {
       "title": "does not modify the original object you crazy DOGE!",
       "fullTitle": "index.js keys does not modify the original object you crazy DOGE!",
-      "duration": 0,
+      "duration": 1,
       "currentRetry": 0,
       "err": {}
     },
@@ -316,7 +310,7 @@
     {
       "title": "does not modify the original object you crazy DOGE!",
       "fullTitle": "index.js values does not modify the original object you crazy DOGE!",
-      "duration": 0,
+      "duration": 1,
       "currentRetry": 0,
       "err": {}
     },
@@ -333,26 +327,6 @@
   ],
   "pending": [],
   "failures": [
-    {
-      "title": "successfully returns a correctly populated array",
-      "fullTitle": "index.js map successfully returns a correctly populated array",
-      "duration": 0,
-      "currentRetry": 0,
-      "err": {
-        "stack": "TypeError: Cannot read properties of undefined (reading 'length')\n    at arraysEqual (test/indexTest.js:295:28)\n    at Context.<anonymous> (test/indexTest.js:44:14)\n    at process.processImmediate (node:internal/timers:483:21)",
-        "message": "Cannot read properties of undefined (reading 'length')"
-      }
-    },
-    {
-      "title": "successfully returns a correctly populated array from modified object values",
-      "fullTitle": "index.js map successfully returns a correctly populated array from modified object values",
-      "duration": 0,
-      "currentRetry": 0,
-      "err": {
-        "stack": "TypeError: Cannot read properties of undefined (reading 'length')\n    at arraysEqual (test/indexTest.js:295:28)\n    at Context.<anonymous> (test/indexTest.js:55:14)\n    at process.processImmediate (node:internal/timers:483:21)",
-        "message": "Cannot read properties of undefined (reading 'length')"
-      }
-    },
     {
       "title": "returns the correct reduced value when passed an initial value",
       "fullTitle": "index.js reduce returns the correct reduced value when passed an initial value",
@@ -480,7 +454,7 @@
     {
       "title": "returns a copy of the **array** with all falsy values removed. In JavaScript, _false_, _null_, _0_, _\"\"_, _undefined_ and _NaN_ are all falsy.",
       "fullTitle": "index.js compact returns a copy of the **array** with all falsy values removed. In JavaScript, _false_, _null_, _0_, _\"\"_, _undefined_ and _NaN_ are all falsy.",
-      "duration": 0,
+      "duration": 1,
       "currentRetry": 0,
       "err": {
         "stack": "TypeError: fi.compact is not a function\n    at Context.<anonymous> (test/indexTest.js:168:29)\n    at process.processImmediate (node:internal/timers:483:21)",
@@ -500,7 +474,7 @@
     {
       "title": "correctly sorts arrays of integers and arrays of strings",
       "fullTitle": "index.js sortBy correctly sorts arrays of integers and arrays of strings",
-      "duration": 0,
+      "duration": 1,
       "currentRetry": 0,
       "err": {
         "stack": "TypeError: fi.sortBy is not a function\n    at Context.<anonymous> (test/indexTest.js:200:29)\n    at process.processImmediate (node:internal/timers:483:21)",
@@ -510,7 +484,7 @@
     {
       "title": "does not modify the original arrays",
       "fullTitle": "index.js sortBy does not modify the original arrays",
-      "duration": 1,
+      "duration": 0,
       "currentRetry": 0,
       "err": {
         "stack": "TypeError: fi.sortBy is not a function\n    at Context.<anonymous> (test/indexTest.js:205:10)\n    at process.processImmediate (node:internal/timers:483:21)",
@@ -540,7 +514,7 @@
     {
       "title": "correctly flattens a single level when a second argument of \"true\" is passed",
       "fullTitle": "index.js flatten correctly flattens a single level when a second argument of \"true\" is passed",
-      "duration": 0,
+      "duration": 1,
       "currentRetry": 0,
       "err": {
         "stack": "TypeError: fi.flatten is not a function\n    at Context.<anonymous> (test/indexTest.js:227:26)\n    at process.processImmediate (node:internal/timers:483:21)",
@@ -560,7 +534,7 @@
     {
       "title": "removes duplicate values from an array when an iteratee is applied",
       "fullTitle": "index.js uniq removes duplicate values from an array when an iteratee is applied",
-      "duration": 1,
+      "duration": 0,
       "currentRetry": 0,
       "err": {
         "stack": "TypeError: fi.uniq is not a function\n    at Context.<anonymous> (test/indexTest.js:244:25)\n    at process.processImmediate (node:internal/timers:483:21)",
@@ -621,8 +595,22 @@
       "err": {}
     },
     {
+      "title": "successfully returns a correctly populated array",
+      "fullTitle": "index.js map successfully returns a correctly populated array",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
       "title": "does not modify the original array",
       "fullTitle": "index.js map does not modify the original array",
+      "duration": 0,
+      "currentRetry": 0,
+      "err": {}
+    },
+    {
+      "title": "successfully returns a correctly populated array from modified object values",
+      "fullTitle": "index.js map successfully returns a correctly populated array from modified object values",
       "duration": 0,
       "currentRetry": 0,
       "err": {}
@@ -644,14 +632,14 @@
     {
       "title": "does not modify the original object you crazy DOGE!",
       "fullTitle": "index.js keys does not modify the original object you crazy DOGE!",
-      "duration": 0,
+      "duration": 1,
       "currentRetry": 0,
       "err": {}
     },
     {
       "title": "does not modify the original object you crazy DOGE!",
       "fullTitle": "index.js values does not modify the original object you crazy DOGE!",
-      "duration": 0,
+      "duration": 1,
       "currentRetry": 0,
       "err": {}
     }

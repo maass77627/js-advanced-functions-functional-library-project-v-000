@@ -17,7 +17,19 @@ const fi = (function() {
 
     },
 
-    map: function() {
+    map: function(collection, cb) {
+      let newCollection = []
+      if (Array.isArray(collection)) {
+        newCollection = collection.map((item, index) => cb(item, index, collection))
+
+      } else {
+        let array = Object.values(collection)
+        newCollection = array.map((item, index) => cb(item, index, collection))
+
+      }
+      return newCollection
+      // let newCollection = collection.map((item, index) => cb(item, index, collection))
+      // return newCollection
 
     },
 
